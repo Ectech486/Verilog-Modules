@@ -1,0 +1,36 @@
+-------------------------------------------
+Dataflow Modeling 
+-------------------------------------------
+
+module and_gate (
+  	input a,	// 1st input 
+ 	input b,	//2nd input
+  	output y  //Output
+);
+assign y = a & b;
+endmodule 
+
+-------------------------------------------
+Behavioral Modeling
+-------------------------------------------
+
+module and_gate_b(a,b,y);
+    input a,b;
+  output y;
+
+always @ (a,b)
+y = a & b;
+              
+endmodule
+
+-------------------------------------------
+Structural Modeling 
+-------------------------------------------
+
+module and_gate_s(a,b,y);
+            input a,b;
+            output y;
+
+and(y,a,b);
+                
+endmodule
